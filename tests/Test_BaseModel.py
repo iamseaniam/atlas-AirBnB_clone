@@ -6,11 +6,11 @@ import uuid
 from datetime import datetime
 
 class TestBaseModel(unittest.TestCase):
-    
+
     def setUp(self):
         """Define the setUp method to initialize the BaseModel instance"""
         self.model = BaseModel()
-        
+
     def test_create_instance(self):
         """Test if an instance of BaseModel is created with correct attributes"""
         self.assertTrue(hasattr(self.model, 'id'))
@@ -19,13 +19,13 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(type(self.model, 'updated_at'))
         self.assertIsInstance(self.model.created_at, datetime)
         self.assertIsInstance(self.model.updated_at, datetime)
-        
+
     def test_create_intance(self):
         """Test if the save method updates the updated_at attribute"""
         initial_updated_at = self.model.updated_at
         self.model.save()
         self.assertNotEqual(initial_updated_at, self.model.updated_at)
-        
+
     def test_to_dict_method(self):
         """Test if the to_dict method returns the correct dictionary"""
         dict_representation = self.model.to_dict()
