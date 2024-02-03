@@ -2,7 +2,8 @@
 """Console module"""
 
 import cmd
-from models import classes
+import json
+import models
 
 class HBNBCommand(cmd.Cmd):
     """Command interpreter class"""
