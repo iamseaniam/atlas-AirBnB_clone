@@ -11,6 +11,7 @@ import uuid
 import models
 from datetime import datetime
 
+
 class BaseModel:
     """ TWO ARGS IMPLEMENT"""
     def __init__(self, *args, **kwargs):
@@ -28,7 +29,7 @@ class BaseModel:
             self.created_at = datetime.now()
             self.updated_at = self.created_at
             models.storage.new(self)
-            
+
     def __str__(self):
         """returns string representation of BaseModel instance"""
         return f"[{type(self).__name__}] ({self.id}) {self.__dict__}"

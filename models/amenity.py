@@ -3,9 +3,10 @@
 
 from models.base_model import BaseModel
 
+
 class Amenity(BaseModel):
-"this class does rich people things"
- name = ""
+    "this class does rich people things"
+    name = ""
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
