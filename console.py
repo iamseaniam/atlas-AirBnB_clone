@@ -4,6 +4,7 @@
 import cmd
 import json
 import models
+from models import classes
 
 class HBNBCommand(cmd.Cmd):
     """Command interpreter class"""
