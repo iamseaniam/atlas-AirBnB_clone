@@ -3,6 +3,7 @@
 
 import cmd
 
+
 class HBNBCommand(cmd.Cmd):
     """Command interpreter class"""
 
@@ -12,7 +13,7 @@ class HBNBCommand(cmd.Cmd):
         """Quit command to exit the program"""
         return True
 
-    def do_EOF(self,arg):
+    def do_EOF(self, arg):
         """Exit the program when EOF is reached"""
         print()
         return True
@@ -23,11 +24,12 @@ class HBNBCommand(cmd.Cmd):
 
     def help_quit(self):
         """Help message for the quit command"""
-        print("Quit command to exit the PRogram")
+        print("Quit command to exit the program")
 
     def help_EOF(self):
         """Help message for the EOF command"""
-        print("Exit mthe program when End-of_File (EOF) is reached")
+        print("Exit the program when End-of_File (EOF) is reached")
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
