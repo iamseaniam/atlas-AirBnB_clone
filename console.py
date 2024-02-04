@@ -4,7 +4,14 @@
 import cmd
 import json
 import models
-from models import classes
+import models .city
+import models .amenity
+import models .base_model
+import models .place
+import models .review
+import models .state
+import models .user 
+from models import storage
 
 class HBNBCommand(cmd.Cmd):
     """Command interpreter class"""
