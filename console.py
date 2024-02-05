@@ -10,8 +10,9 @@ import models .base_model
 import models .place
 import models .review
 import models .state
-import models .user 
+import models .user
 from models import storage
+
 
 class HBNBCommand(cmd.Cmd):
     """Command interpreter class"""
