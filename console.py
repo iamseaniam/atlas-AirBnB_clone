@@ -2,16 +2,16 @@
 """Console module"""
 
 import cmd
+from models.base_model import BaseModel
 import json
 import models
-import models .city
-import models .amenity
-import models .base_model
-import models .place
-import models .review
-import models .state
-import models .user
-from models import engine
+from models.city import City
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
+from models.state import State
+from models.user import User
+from models.engine import engine
 
 
 class HBNBCommand(cmd.Cmd):
