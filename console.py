@@ -11,7 +11,7 @@ import models .place
 import models .review
 import models .state
 import models .user
-from models import storage
+from models import engine
 
 
 class HBNBCommand(cmd.Cmd):
@@ -116,6 +116,7 @@ class HBNBCommand(cmd.Cmd):
                 attr_value = args[3]
                 setattr(instance, attr_name, attr_value)
                 instance.save()
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
