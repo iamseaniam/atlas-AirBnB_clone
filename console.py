@@ -92,10 +92,15 @@ class HBNBCommand(cmd.Cmd):
         elif args[0] not in self.valid_classes:
             print("** class doesn't exist **")
         else:
-            print([str(all_objects[obj]) for obj in all_objects if args[0] in obj])
+            print([
+                str(all_objects[obj])
+                for obj in all_objects
+                if args[0] in obj
+            ])
 
     def do_update(self, arg):
         """Updates an instance based on the class name and id"""
+
         args = arg.split()
         if not args or args[0] not in self.valid_classes:
             print("** class name missing **")
@@ -116,7 +121,6 @@ class HBNBCommand(cmd.Cmd):
                 attr_value = args[3]
                 setattr(instance, attr_name, attr_value)
                 instance.save()
-
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
