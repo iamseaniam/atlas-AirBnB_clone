@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"class FileStorage, which serializes and deserializes
-        instances into a JSON string"
+"""class FileStorage, which serializes and deserializes
+    instances into a JSON string"""
 from models.base_model import BaseModel
 import json
 import os
