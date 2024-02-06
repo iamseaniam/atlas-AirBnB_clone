@@ -4,10 +4,10 @@
 from models.base_model import BaseModel
 
 
-Class City(BaseModel):
-"city class"
-state_id = ""
-name = ""
+class City(BaseModel):
+    "city class"
+    state_id = ""
+    name = ""
 
-def __init__(self, *args, **kwargs):
-    super().__init__(*args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
