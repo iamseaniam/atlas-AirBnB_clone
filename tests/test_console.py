@@ -3,7 +3,6 @@
 import unittest
 from unittest.mock import patch
 from io import StringIO
-from test_console import HBNBCommand  # Replace 'your_module_name' with the actual name of your module
 
 
 class TestHBNBCommand(unittest.TestCase):
@@ -11,7 +10,7 @@ class TestHBNBCommand(unittest.TestCase):
     @patch('sys.stdout', new_callable=StringIO)
     def assert_output(self, expected_output, mock_stdout, function, *args):
         with patch('builtins.input', side_effect=args):
-            HBNBCommand().onecmd(" ".join([function] + list(args)))
+            TestHBNBCommand().onecmd(" ".join([function] + list(args)))
             self.assertEqual(mock_stdout.getvalue().strip(), expected_output)
 
     def test_quit_command(self):

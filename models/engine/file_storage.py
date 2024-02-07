@@ -11,6 +11,7 @@ from models.review import Review
 from models.state import State
 from models.user import User
 from models.amenity import Amenity
+from models.storage_interface import StorageInterface
 
 
 class FileStorage:
@@ -26,6 +27,7 @@ class FileStorage:
 
     __file_path = 'file.json'
     __objects = {}
+    
 
     def all(self):
         """
@@ -40,7 +42,7 @@ class FileStorage:
         """
         self.__objects[f'{obj.__class__.__name__}.{obj.id}'] = obj
 
-    def save(self):
+    def save(self, obj):
         """
         creates empty dictionary TempDict of keys the same as within __objects
             and value calls to_dict which convert __objects into dictionary,
