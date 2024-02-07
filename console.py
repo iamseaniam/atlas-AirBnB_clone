@@ -11,7 +11,9 @@ from models.place import Place
 from models.review import Review
 from models.state import State
 from models.user import User
-from models.engine import engine
+from models.engine.file_storage import FileStorage
+from models import storage
+
 
 
 class HBNBCommand(cmd.Cmd):
@@ -19,6 +21,7 @@ class HBNBCommand(cmd.Cmd):
 
     prompt = "(hbnb) "
     valid_classes = ["BaseModel"]
+    all_objects = storage.all()
 
     def do_quit(self, arg):
         """Quit command to exit the program"""
@@ -124,4 +127,3 @@ class HBNBCommand(cmd.Cmd):
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
-

@@ -6,6 +6,7 @@ from .place import Place
 from .review import Review
 from .state import State
 from .user import User
+from .engine.file_storage import FileStorage
 
 classes = {
     'BaseModel': BaseModel,
@@ -16,3 +17,5 @@ classes = {
     'State': State,
     'User': User
 }
+
+storage = FileStorage()
