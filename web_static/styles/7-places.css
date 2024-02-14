@@ -1,6 +1,10 @@
 .places {
     margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
 
 .places h1 {
     font-size: 30px;
